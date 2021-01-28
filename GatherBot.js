@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const OPERATOR = "!";
@@ -19,9 +20,7 @@ const parties = [
     }
 ]
 
-//#FILL - Write your bot token...
-//client.login('I AM NOT A TOKEN PLEASE GIVE ME A REAL VALUE');
-client.login('ODA0MDA4NjI1ODgxNjEyMjk4.YBGFYg.e8NlNbL6wEKMoqrQOlbrR52cUjQ');
+client.login(process.env.BOTTOKEN);
 
 const join_command_action = (name, value) => {
     //check if value is proper (2,3,4)
